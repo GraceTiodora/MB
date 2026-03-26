@@ -1,0 +1,167 @@
+  <div class="page-inner">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">Tracker Distribusi Real-time</div>
+        <div class="dash-sub">Pantau perjalanan makanan dari dapur hingga siswa</div>
+      </div>
+      <div style="display:flex;gap:10px;">
+        <span class="badge badge-verified" style="padding: 7px 14px; font-size: 12px;">● Live Tracking Aktif</span>
+        <button class="btn-action btn-ghost" onclick="showPage('dashboard')">← Dashboard</button>
+      </div>
+    </div>
+
+    <!-- Search bar -->
+    <div class="card" style="margin-bottom: 20px;">
+      <div class="card-body search-filter-row">
+<<<<<<< Updated upstream
+        <input class="form-control" placeholder="Cari ID pengiriman atau nama sekolah..." value="SHP-20240115-001">
+        <select class="form-select" style="width: auto; flex: 0 1 auto; min-width: 160px;">
+=======
+        <input class="form-control" placeholder="Cari ID pengiriman atau nama sekolah..." value="SHP-20240115-001" style="flex: 1;">
+        <button class="btn-action btn-blue"><i class="fa-solid fa-magnifying-glass"></i> Cari</button>
+        <select class="form-select" style="min-width: 160px;">
+>>>>>>> Stashed changes
+          <option>Semua Status</option>
+          <option>Dalam Perjalanan</option>
+          <option>Selesai</option>
+          <option>Tertunda</option>
+        </select>
+<<<<<<< Updated upstream
+        <button class="btn-action btn-blue">🔍 Cari</button>
+=======
+>>>>>>> Stashed changes
+      </div>
+    </div>
+
+    <!-- Main tracker -->
+    <div class="card" style="margin-bottom: 20px;">
+      <div class="card-header">
+        <div>
+          <div class="card-title">Pengiriman #SHP-20240115-001</div>
+          <div class="card-desc">Dapur Pusat Bandung → SDN 12 Cicaheum</div>
+        </div>
+        <span class="badge badge-primary">🚚 Dalam Perjalanan</span>
+      </div>
+      <div class="card-body">
+        <div class="tracker-timeline">
+          <div class="timeline-row">
+            <div class="timeline-dot success"></div>
+            <div>
+              <div class="timeline-title">Pesanan diproses</div>
+              <div class="timeline-desc">2.450 porsi disiapkan</div>
+            </div>
+            <div class="timeline-time">07:30</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot success"></div>
+            <div>
+              <div class="timeline-title">Berangkat dari dapur</div>
+              <div class="timeline-desc">Dapur Pusat Bandung</div>
+            </div>
+            <div class="timeline-time">08:10</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot pending"></div>
+            <div>
+              <div class="timeline-title">Dalam perjalanan</div>
+              <div class="timeline-desc">ETA 09:00 WIB</div>
+            </div>
+            <div class="timeline-time">08:40</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot issue"></div>
+            <div>
+              <div class="timeline-title">Terdeteksi kemacetan</div>
+              <div class="timeline-desc">Kecepatan menurun di KM 12</div>
+            </div>
+            <div class="timeline-time">08:55</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot pending"></div>
+            <div>
+              <div class="timeline-title">Perkiraan tiba</div>
+              <div class="timeline-desc">SDN 12 Cicaheum</div>
+            </div>
+            <div class="timeline-time">09:15</div>
+          </div>
+        </div>
+
+        <!-- Shipment details -->
+        <div class="tracker-details-grid">
+          <div class="tracker-detail-item">
+            <div class="tracker-detail-label">Pengirim</div>
+            <div class="tracker-detail-value">Dapur Pusat Bandung</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="tracker-detail-label">Penerima</div>
+            <div class="tracker-detail-value">SDN 12 Cicaheum</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="tracker-detail-label">Total Porsi</div>
+            <div class="tracker-detail-value">2.450</div>
+          </div>
+          <div class="tracker-detail-item">
+            <div class="tracker-detail-label">Status</div>
+            <div class="tracker-detail-value" style="color: var(--orange-600);">Dalam Perjalanan</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second shipment: problematic -->
+    <div class="card" style="border-color: #FECACA;">
+      <div class="card-header" style="background: var(--red-50); border-bottom: 1px solid #FECACA;">
+        <div>
+          <div class="card-title">Pengiriman #SHP-20240115-017</div>
+          <div class="card-desc">Dapur Pusat Jayapura → SDN 05 Abepura</div>
+        </div>
+        <span class="badge badge-issue">⚠ Tertunda</span>
+      </div>
+      <div class="card-body">
+        <div class="tracker-timeline">
+          <div class="timeline-row">
+            <div class="timeline-dot success"></div>
+            <div>
+              <div class="timeline-title">Pesanan diproses</div>
+              <div class="timeline-desc">1.200 porsi disiapkan</div>
+            </div>
+            <div class="timeline-time">07:20</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot success"></div>
+            <div>
+              <div class="timeline-title">Berangkat dari dapur</div>
+              <div class="timeline-desc">Dapur Pusat Jayapura</div>
+            </div>
+            <div class="timeline-time">08:05</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot issue"></div>
+            <div>
+              <div class="timeline-title">Gangguan cuaca</div>
+              <div class="timeline-desc">Hujan deras, penundaan 30 menit</div>
+            </div>
+            <div class="timeline-time">08:40</div>
+          </div>
+          <div class="tl-line"></div>
+          <div class="timeline-row">
+            <div class="timeline-dot pending"></div>
+            <div>
+              <div class="timeline-title">Perkiraan tiba</div>
+              <div class="timeline-desc">SDN 05 Abepura</div>
+            </div>
+            <div class="timeline-time">09:30</div>
+          </div>
+        </div>
+        <div style="background: var(--red-50); border: 1px solid #FECACA; border-radius: var(--radius-md); padding: 12px; margin-top: 16px; font-size: 13px; color: var(--red-600);">
+          Keterlambatan diperkirakan 30-45 menit. Tim lapangan sedang berkoordinasi.
+        </div>
+      </div>
+    </div>
+  </div>

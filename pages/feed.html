@@ -1,0 +1,103 @@
+  <div class="page-inner">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">Laporan Publik Terverifikasi</div>
+        <div class="dash-sub">Update dari sekolah dan masyarakat yang telah divalidasi admin</div>
+      </div>
+      <button class="btn-action btn-blue" onclick="showPage('feedback')">+ Kirim Laporan Baru</button>
+    </div>
+
+    <!-- Filter -->
+    <div class="card" style="margin-bottom: 20px;">
+      <div class="filter-bar">
+        <span style="font-size: 12px; font-weight: 700; color: var(--gray-500);">Filter:</span>
+        <button class="filter-btn active">Semua</button>
+        <button class="filter-btn">✓ Terverifikasi</button>
+        <button class="filter-btn">⚠ Isu</button>
+        <button class="filter-btn">✅ Selesai</button>
+        <button class="filter-btn">DKI Jakarta</button>
+        <button class="filter-btn">Jawa Barat</button>
+        <button class="filter-btn">Papua</button>
+      </div>
+    </div>
+
+    <div class="feed-grid">
+      <!-- Card 1 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #DCFCE7, #BBF7D0);">🍱
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">14/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">DKI Jakarta • 3 jam lalu</div>
+          <div class="feed-title">Distribusi tepat waktu di SDN 01 Menteng</div>
+          <div class="feed-desc">Distribusi berjalan lancar dan makanan diterima siswa tepat waktu.</div>
+          <div class="feed-tags"><span class="badge badge-verified">✓ Terverifikasi</span></div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #FEF2F2, #FECACA);">⚠️
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">13/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">Papua • 1 hari lalu</div>
+          <div class="feed-title">Keluhan kualitas menu di SDN 12 Sorong</div>
+          <div class="feed-desc">Makanan kurang matang, perlu evaluasi dapur lokal.</div>
+          <div class="feed-tags"><span class="badge badge-issue">⚠ Isu</span></div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #EFF6FF, #BFDBFE);">✅
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">12/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">Jawa Barat • 2 hari lalu</div>
+          <div class="feed-title">Verifikasi selesai untuk 2.847 porsi</div>
+          <div class="feed-desc">Distribusi terverifikasi oleh admin wilayah.</div>
+          <div class="feed-tags"><span class="badge badge-resolved">✅ Selesai</span></div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #DCFCE7, #BBF7D0);">🥗
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">11/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">Banten • 3 hari lalu</div>
+          <div class="feed-title">Menu bergizi seimbang di SDN 05 Serang</div>
+          <div class="feed-desc">Komposisi gizi telah sesuai standar.</div>
+          <div class="feed-tags"><span class="badge badge-verified">✓ Terverifikasi</span></div>
+        </div>
+      </div>
+
+      <!-- Card 5 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #FFF7ED, #FED7AA);">🔶
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">10/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">Kalimantan • 4 hari lalu</div>
+          <div class="feed-title">Stok bahan pokok menipis di sekolah terpencil</div>
+          <div class="feed-desc">Perlu pengiriman tambahan dari gudang pusat.</div>
+          <div class="feed-tags"><span class="badge badge-pending">⚠ Perlu Tindak Lanjut</span></div>
+        </div>
+      </div>
+
+      <!-- Card 6 -->
+      <div class="feed-card">
+        <div class="feed-img" style="background: linear-gradient(135deg, #DCFCE7, #BBF7D0);">🍚
+          <span style="position:absolute;bottom:10px;right:10px;font-size:11px;opacity:0.6;">09/01</span>
+        </div>
+        <div class="feed-body">
+          <div class="feed-meta">Sumatera Utara • 5 hari lalu</div>
+          <div class="feed-title">Distribusi makanan terlambat di SDN 03 Binjai</div>
+          <div class="feed-desc">Terjadi keterlambatan karena cuaca buruk.</div>
+          <div class="feed-tags"><span class="badge badge-issue">⚠ Isu</span></div>
+        </div>
+      </div>
+    </div>
+  </div>

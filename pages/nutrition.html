@@ -1,0 +1,110 @@
+  <div class="page-inner">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">Insight Nutrisi Harian</div>
+        <div class="dash-sub">Data kandungan gizi menu MBG hari ini — Senin, 15 Januari 2024</div>
+      </div>
+      <button class="btn-action btn-ghost" onclick="showPage('dashboard')">← Dashboard</button>
+    </div>
+
+    <!-- Today's meal -->
+    <div class="meal-card">
+      <div class="meal-header">
+        <div class="meal-icon">🍱</div>
+        <div>
+          <div class="meal-title">Menu Hari Ini</div>
+          <div class="meal-sub">Ayam panggang, sayur bening, nasi merah</div>
+        </div>
+        <span class="badge badge-verified" style="margin-left: auto;">✓ Terverifikasi Ahli Gizi</span>
+      </div>
+
+      <div class="nutrient-grid">
+        <div class="nutrient-item tooltip-trigger" data-tooltip="Rekomendasi 550-600 kkal untuk makan siang">
+          <div class="nutrient-label">Kalori</div>
+          <div class="nutrient-value">580 kkal</div>
+          <div class="nutrient-sub">Target 550-600</div>
+        </div>
+        <div class="nutrient-item tooltip-trigger" data-tooltip="Kebutuhan 20-25g per makan siang">
+          <div class="nutrient-label">Protein</div>
+          <div class="nutrient-value">24 g</div>
+          <div class="nutrient-sub">Target 20-25</div>
+        </div>
+        <div class="nutrient-item tooltip-trigger" data-tooltip="Kebutuhan 70-80g per makan siang">
+          <div class="nutrient-label">Karbo</div>
+          <div class="nutrient-value">72 g</div>
+          <div class="nutrient-sub">Target 70-80</div>
+        </div>
+        <div class="nutrient-item tooltip-trigger" data-tooltip="Kebutuhan 15-20g per makan siang">
+          <div class="nutrient-label">Lemak</div>
+          <div class="nutrient-value">18 g</div>
+          <div class="nutrient-sub">Target 15-20</div>
+        </div>
+      </div>
+
+      <!-- Nutrient progress bars -->
+      <div>
+        <div class="nutrient-bar-label">
+          <div>Kalori</div>
+          <div>580/600</div>
+        </div>
+        <div style="height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 14px; overflow: hidden;"><div class="progress-fill fill-blue" style="width: 97%; height: 100%;"></div></div>
+
+        <div class="nutrient-bar-label">
+          <div>Protein</div>
+          <div>24/25</div>
+        </div>
+        <div style="height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 14px; overflow: hidden;"><div class="progress-fill fill-green" style="width: 96%; height: 100%;"></div></div>
+
+        <div class="nutrient-bar-label">
+          <div>Karbo</div>
+          <div>72/80</div>
+        </div>
+        <div style="height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 14px; overflow: hidden;"><div class="progress-fill fill-orange" style="width: 90%; height: 100%;"></div></div>
+
+        <div class="nutrient-bar-label">
+          <div>Lemak</div>
+          <div>18/20</div>
+        </div>
+        <div style="height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 14px; overflow: hidden;"><div class="progress-fill fill-green" style="width: 90%; height: 100%;"></div></div>
+
+        <div class="nutrient-bar-label">
+          <div>Serat</div>
+          <div>8/10</div>
+        </div>
+        <div style="height: 8px; background: #e9ecef; border-radius: 4px; margin-bottom: 14px; overflow: hidden;"><div class="progress-fill fill-blue" style="width: 80%; height: 100%;"></div></div>
+      </div>
+    </div>
+
+    <!-- Weekly trend -->
+    <div class="dash-grid">
+      <div class="card">
+        <div class="card-header"><span class="card-title">Tren Nutrisi Minggu Ini</span></div>
+        <div class="chart-area" style="height: 200px; position: relative;">
+          <canvas id="nutriChart"></canvas>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-header"><span class="card-title">Komposisi Bahan Makanan</span></div>
+        <div class="card-body">
+          <div style="display:flex;flex-direction:column;gap:12px;">
+            <div style="display:flex;justify-content:space-between;font-size:13px;">
+              <span>Karbohidrat</span><span>40%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill fill-blue" style="width: 40%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;">
+              <span>Protein</span><span>25%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill fill-green" style="width: 25%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;">
+              <span>Lemak</span><span>20%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill fill-orange" style="width: 20%"></div></div>
+            <div style="display:flex;justify-content:space-between;font-size:13px;">
+              <span>Serat</span><span>15%</span>
+            </div>
+            <div class="progress-bar"><div class="progress-fill fill-green" style="width: 15%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

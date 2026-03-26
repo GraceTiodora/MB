@@ -1,0 +1,202 @@
+  <section class="hero hero-professional">
+    <div class="hero-bg" aria-hidden="true"></div>
+    <div class="hero-overlay"></div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <h1>Pantau MBG Secara Terbuka dan Real-Time</h1>
+        <p>Lihat distribusi, kualitas gizi, dan laporan masyarakat dalam satu dashboard.</p>
+        <div class="hero-cta-group">
+          <button class="btn-primary" onclick="showPage('dashboard')">Lihat Data Sekarang</button>
+          <button class="btn-outline" onclick="showPage('feedback')">Kirim Laporan</button>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- System-First Summary -->
+  <section class="landing-block system-section system-section-primary system-section-snapshot reveal">
+    <div class="landing-container system-split align-left">
+      <div class="system-info">
+        <span class="section-tag tag-green">Snapshot MBG</span>
+        <div class="section-title">Snapshot Operasional <span class="title-accent">MBG</span></div>
+        <div class="section-subtitle">Ringkasan real-time untuk distribusi, sekolah, dan laporan publik yang terverifikasi.</div>
+      </div>
+      <div class="system-panel">
+        <div class="kpi-grid reveal-trigger">
+          <div class="kpi-card kpi-hero" onclick="showPage('region')" style="cursor:pointer">
+            <div class="kpi-accent">🏫</div>
+            <div class="kpi-label">Total Penerima</div>
+            <div class="kpi-value">4.2 Jt</div>
+            <div class="kpi-change">↑ 12% dari bulan lalu</div>
+          </div>
+          <div class="kpi-card" onclick="showPage('tracker')" style="cursor:pointer">
+            <div class="kpi-accent">🍱</div>
+            <div class="kpi-label">Porsi Hari Ini</div>
+            <div class="kpi-value">3.8 Jt</div>
+            <div class="kpi-change">↑ 91,5% dari target</div>
+          </div>
+          <div class="kpi-card" onclick="showPage('region')" style="cursor:pointer">
+            <div class="kpi-accent">🗺</div>
+            <div class="kpi-label">Wilayah Aktif</div>
+            <div class="kpi-value">34</div>
+            <div class="kpi-change">✓ Semua provinsi</div>
+          </div>
+          <div class="kpi-card kpi-alert" onclick="showPage('tracking')" style="cursor:pointer">
+            <div class="kpi-accent">🔔</div>
+            <div class="kpi-label">Isu Terbuka</div>
+            <div class="kpi-value">47</div>
+            <div class="kpi-change">↑ 8 laporan baru hari ini</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-block system-section system-section-alt system-section-distribusi reveal">
+    <div class="landing-container">
+      <div class="distribusi-header">
+        <span class="section-tag tag-blue">DISTRIBUSI</span>
+        <div class="section-title">Penyaluran di Seluruh Wilayah</div>
+        <div class="section-subtitle">Pantau progres implementasi MBG di setiap provinsi secara real-time.</div>
+      </div>
+      <div class="region-display">
+        <div class="region-bg-visual"></div>
+        <div class="region-grid-3col">
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">DKI Jakarta</div><div class="region-sub">1.247 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 96%"></div></div></div>
+            <div class="pct-label">96%</div>
+          </div>
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">Jawa Barat</div><div class="region-sub">2.891 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 88%"></div></div></div>
+            <div class="pct-label">88%</div>
+          </div>
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">Jawa Tengah</div><div class="region-sub">3.102 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 84%"></div></div></div>
+            <div class="pct-label">84%</div>
+          </div>
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">Jawa Timur</div><div class="region-sub">3.456 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 79%"></div></div></div>
+            <div class="pct-label">79%</div>
+          </div>
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">Sumatera Utara</div><div class="region-sub">1.823 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 76%"></div></div></div>
+            <div class="pct-label">76%</div>
+          </div>
+          <div class="region-card" onclick="showPage('region')">
+            <div class="region-info"><div class="region-name">Sumatera Barat</div><div class="region-sub">1.234 sekolah</div></div>
+            <div class="progress-visual"><div class="progress-bar"><div class="progress-fill" style="width: 72%"></div></div></div>
+            <div class="pct-label">72%</div>
+          </div>
+        </div>
+      </div>
+      <div class="distribusi-footer">
+        <button class="btn-action btn-ghost" onclick="showPage('region')">Lihat Semua Wilayah</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Collaboration Strip -->
+  <section class="landing-block landing-collab">
+    <div class="landing-container">
+      <div class="collab-header">
+        <span class="collab-eyebrow">Kolaborasi</span>
+        <div class="collab-title">Kolaborasi untuk kelancaran distribusi MBG</div>
+        <div class="collab-subtitle">Sinergi lintas kementerian, daerah, dan mitra pelaksana.</div>
+      </div>
+      <div class="collab-marquee" aria-label="Mitra kolaborasi">
+        <div class="collab-track">
+          <div class="collab-logobox"><img class="collab-logo" src="image1.png" alt="Logo 1"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image2.png" alt="Logo 2"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image3.png" alt="Logo 3"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image4.png" alt="Logo 4"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image5.png" alt="Logo 5"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image6.png" alt="Logo 6"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image7.png" alt="Logo 7"></div>
+<<<<<<< Updated upstream
+=======
+          <div class="collab-logobox"><img class="collab-logo" src="image8.png" alt="Logo 8"></div>
+>>>>>>> Stashed changes
+          <div class="collab-logobox"><img class="collab-logo" src="image1.png" alt="Logo 1"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image2.png" alt="Logo 2"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image3.png" alt="Logo 3"></div>
+          <div class="collab-logobox"><img class="collab-logo" src="image4.png" alt="Logo 4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-block system-section system-section-primary system-section-report reveal">
+    <div class="landing-container system-split align-left">
+      <div class="system-info report-info">
+        <div class="report-header">
+          <span class="section-tag tag-orange">Laporan</span>
+          <div class="section-title">Status Laporan Terbaru</div>
+        </div>
+        <div class="section-subtitle">Tiga isu terakhir yang sedang ditangani atau sudah diverifikasi.</div>
+        <div class="system-actions">
+          <button class="btn-action btn-ghost" onclick="showPage('tracking')">Pantau Semua Laporan</button>
+        </div>
+      </div>
+      <div class="system-panel">
+        <div class="report-gallery-header">
+          <div>
+            <div class="report-gallery-title">Laporan Lapangan Terkini</div>
+          </div>
+        </div>
+        <div class="report-gallery-grid">
+          <article class="report-photo-card" onclick="showPage('tracking')">
+            <div class="report-photo" style="background-image: url('https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="report-photo-body">
+              <div class="report-photo-title">Keterlambatan distribusi — NTT</div>
+              <div class="report-photo-meta">47 sekolah belum menerima • 2j lalu</div>
+            </div>
+          </article>
+          <article class="report-photo-card" onclick="showPage('tracking')">
+            <div class="report-photo" style="background-image: url('https://images.unsplash.com/photo-1516321497487-e288fb19713f?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="report-photo-body">
+              <div class="report-photo-title">Keluhan kualitas makanan — Papua</div>
+              <div class="report-photo-meta">12 laporan masuk hari ini • 3j lalu</div>
+            </div>
+          </article>
+          <article class="report-photo-card" onclick="showPage('tracking')">
+            <div class="report-photo" style="background-image: url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="report-photo-body">
+              <div class="report-photo-title">Verifikasi selesai — Jawa Barat</div>
+              <div class="report-photo-meta">2.847 porsi dikonfirmasi • 1j lalu</div>
+            </div>
+          </article>
+          <article class="report-photo-card" onclick="showPage('tracking')">
+            <div class="report-photo" style="background-image: url('https://images.unsplash.com/photo-1523995462485-3d171b5c8fa9?auto=format&fit=crop&w=900&q=80');"></div>
+            <div class="report-photo-body">
+              <div class="report-photo-title">Stok bahan pokok menipis — Kaltim</div>
+              <div class="report-photo-meta">Estimasi habis dalam 2 hari</div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="landing-block system-section system-section-alt system-section-cta reveal">
+    <div class="landing-container system-split">
+      <div class="system-info">
+        <div class="akses-header">
+          <span class="section-tag tag-green">AKSES</span>
+          <div class="section-title">Butuh tampilan lengkap?</div>
+          <div class="section-subtitle">Masuk dashboard untuk peta interaktif, tren, dan laporan detail.</div>
+        </div>
+      </div>
+      <div class="system-panel">
+        <div class="landing-cta-inline compact">
+          <button class="btn-action btn-blue" onclick="showPage('dashboard')">Buka Dashboard</button>
+          <button class="btn-action btn-ghost" onclick="showPage('region')">Peta Distribusi</button>
+        </div>
+      </div>
+    </div>
+  </section>

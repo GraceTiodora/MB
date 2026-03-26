@@ -1,0 +1,75 @@
+  <div style="min-height: 100vh; display: flex; align-items: center; justify-content: center; background: linear-gradient(135deg, #0f7e3b 0%, #0f2f25 100%);">
+    <div style="width: 100%; max-width: 380px; padding: 20px;">
+      <div class="login-card">
+        <!-- Header -->
+        <div style="text-align: center; margin-bottom: 32px;">
+          <div style="font-size: 48px; margin-bottom: 12px;">🏛️</div>
+          <div style="font-size: 20px; font-weight: 800; color: var(--navy); margin-bottom: 4px;">MBGTrack</div>
+          <div style="font-size: 12px; color: var(--gray-500); letter-spacing: 0.05em; text-transform: uppercase;">Portal Data MBG Nasional</div>
+        </div>
+
+        <!-- Login Form -->
+        <div id="login-form-wrap">
+          <div style="margin-bottom: 24px;">
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em;">Username</label>
+            <input id="login-username" type="text" class="form-control" placeholder="Masukkan username..." style="width: 100%;">
+          </div>
+
+          <div style="margin-bottom: 24px;">
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em;">Password</label>
+            <input id="login-password" type="password" class="form-control" placeholder="Masukkan password..." style="width: 100%;">
+          </div>
+
+          <!-- Role Selection -->
+          <div style="margin-bottom: 24px;">
+            <label style="font-size: 12px; font-weight: 700; color: var(--navy); display: block; margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.04em;">Login Sebagai</label>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 8px;">
+              <button type="button" class="role-btn active" data-role="admin" onclick="selectRole(this)" style="padding: 10px; border: 2px solid var(--red-primary); background: rgba(15, 126, 59, 0.1); color: var(--red-primary); border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.2s;">
+                👨‍💼 Admin
+              </button>
+              <button type="button" class="role-btn" data-role="sekolah" onclick="selectRole(this)" style="padding: 10px; border: 2px solid var(--gray-300); background: var(--white); color: var(--gray-600); border-radius: 6px; cursor: pointer; font-weight: 600; font-size: 12px; transition: all 0.2s;">
+                🏫 Sekolah
+              </button>
+            </div>
+          </div>
+
+          <button class="btn-action btn-blue" onclick="loginHandler()" style="width: 100%; justify-content: center; margin-bottom: 12px;">Masuk</button>
+
+          <!-- Publik access -->
+          <button class="btn-action btn-ghost" onclick="loginAsPublic()" style="width: 100%; justify-content: center;">Atau Akses Sebagai Publik</button>
+        </div>
+
+        <!-- Error message -->
+        <div id="login-error" style="display: none; background: #FEE2E2; border: 1px solid #FCA5A5; color: #B91C1C; padding: 10px; border-radius: 6px; margin-top: 16px; font-size: 12px;"></div>
+
+        <!-- Demo credentials -->
+        <div style="margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--gray-200);">
+          <div style="font-size: 11px; color: var(--gray-500); margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.04em; font-weight: 700;">Demo Credentials</div>
+          <div style="font-size: 11px; color: var(--gray-600); line-height: 1.6;">
+            <div><strong>Admin:</strong> admin / admin123</div>
+            <div><strong>Sekolah:</strong> sekolah / sekolah123</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <style>
+    .login-card {
+      background: var(--white);
+      border-radius: var(--radius-md);
+      padding: 32px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    }
+
+    .role-btn.active {
+      background: rgba(15, 126, 59, 0.15) !important;
+      border-color: var(--red-primary) !important;
+      color: var(--red-primary) !important;
+    }
+
+    .role-btn:hover {
+      border-color: var(--red-primary);
+      background: rgba(15, 126, 59, 0.05);
+    }
+  </style>

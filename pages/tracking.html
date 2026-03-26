@@ -1,0 +1,86 @@
+  <div class="page-inner">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">Status Laporan</div>
+        <div class="dash-sub">Pantau perkembangan laporan yang telah dikirimkan</div>
+      </div>
+      <button class="btn-action btn-blue" onclick="showPage('feedback')">+ Laporan Baru</button>
+    </div>
+
+    <!-- Track by ID -->
+    <div class="card" style="margin-bottom: 20px;">
+      <div class="card-body" style="display: flex; gap: 12px; align-items: center;">
+        <input class="form-control" placeholder="Masukkan ID laporan (contoh: RPT-2024-0892)" style="flex: 1;" value="RPT-2024-0892">
+        <button class="btn-action btn-blue">🔍 Cari</button>
+      </div>
+    </div>
+
+    <!-- Reports List -->
+    <div class="report-card">
+      <div class="report-header">
+        <div>
+          <div class="report-id">RPT-2024-0892</div>
+          <div class="report-title">Keterlambatan distribusi di SDN 07 Manado</div>
+        </div>
+        <span class="badge badge-resolved" style="padding: 7px 14px;">✓ Selesai</span>
+      </div>
+      <div class="timeline-mini">
+        <div class="timeline-row">
+          <div>📩 Laporan diterima</div>
+          <div>11 Jan 2024</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="timeline-row">
+          <div>👨‍💼 Verifikasi admin</div>
+          <div>11 Jan 2024</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="timeline-row">
+          <div>🚚 Distribusi ulang</div>
+          <div>12 Jan 2024</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="timeline-row">
+          <div>✅ Selesai</div>
+          <div>12 Jan 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <div class="report-header">
+        <div>
+          <div class="report-id">RPT-2024-0765</div>
+          <div class="report-title">Menu kurang matang di SDN 12 Sorong</div>
+        </div>
+        <span class="badge badge-reviewed" style="padding: 7px 14px;">Sedang Ditinjau</span>
+      </div>
+      <div class="timeline-mini">
+        <div class="timeline-row">
+          <div>📩 Laporan diterima</div>
+          <div>10 Jan 2024</div>
+        </div>
+        <div class="tl-line"></div>
+        <div class="timeline-row">
+          <div>👨‍💼 Verifikasi admin</div>
+          <div>10 Jan 2024</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="report-card">
+      <div class="report-header">
+        <div>
+          <div class="report-id">RPT-2024-0543</div>
+          <div class="report-title">Keterlambatan pengiriman di SDN 05 Abepura</div>
+        </div>
+        <span class="badge badge-submitted" style="padding: 7px 14px;">Baru Dikirim</span>
+      </div>
+      <div class="timeline-mini">
+        <div class="timeline-row">
+          <div>📩 Laporan diterima</div>
+          <div>09 Jan 2024</div>
+        </div>
+      </div>
+    </div>
+  </div>

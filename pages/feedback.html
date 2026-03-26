@@ -1,0 +1,79 @@
+  <div class="page-inner" style="max-width: 720px;">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">Kirim Laporan</div>
+        <div class="dash-sub">Laporan Anda membantu meningkatkan kualitas program MBG</div>
+      </div>
+      <button class="btn-action btn-ghost" onclick="showPage('dashboard')">← Kembali</button>
+    </div>
+
+    <div id="feedback-form-wrap">
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Form Laporan</span>
+        </div>
+        <div class="card-body">
+          <div class="form-group">
+            <label class="form-label">Nama Sekolah *</label>
+            <input class="form-control" id="inp-school" placeholder="Contoh: SDN 01 Menteng">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Provinsi *</label>
+            <select class="form-select" id="inp-province">
+              <option value="">Pilih Provinsi</option>
+              <option>DKI Jakarta</option>
+              <option>Jawa Barat</option>
+              <option>Jawa Tengah</option>
+              <option>Jawa Timur</option>
+              <option>Sumatera Utara</option>
+              <option>Kalimantan</option>
+              <option>Sulawesi</option>
+              <option>Maluku</option>
+              <option>Papua</option>
+              <option>NTT</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Kategori Laporan *</label>
+            <select class="form-select" id="inp-category">
+              <option value="">Pilih Kategori</option>
+              <option>Keterlambatan</option>
+              <option>Kualitas Makanan</option>
+              <option>Jumlah Porsi</option>
+              <option>Lainnya</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Deskripsi Laporan *</label>
+            <textarea class="form-control" id="inp-desc" rows="4" placeholder="Tuliskan detail laporan..."></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Rating Pelayanan</label>
+            <div class="star-rating">
+              <span class="star" onclick="setRating(1)">★</span>
+              <span class="star" onclick="setRating(2)">★</span>
+              <span class="star" onclick="setRating(3)">★</span>
+              <span class="star" onclick="setRating(4)">★</span>
+              <span class="star" onclick="setRating(5)">★</span>
+            </div>
+          </div>
+          <button class="btn-action btn-blue" style="width:100%; justify-content:center; margin-top: 6px;" onclick="submitFeedback()">Kirim Laporan</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Success State (hidden) -->
+    <div id="feedback-success" style="display: none;">
+      <div class="card">
+        <div class="card-body">
+          <div class="success-screen">
+            <div class="success-icon">✅</div>
+            <div class="success-title">Laporan Berhasil Dikirim</div>
+            <div class="success-sub">Terima kasih, laporan Anda akan segera kami proses.</div>
+            <div class="tracking-id">ID: RPT-2024-0892</div>
+            <button class="btn-action btn-ghost" onclick="resetFeedback()">Kirim Laporan Lagi</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

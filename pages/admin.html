@@ -1,0 +1,168 @@
+  <div class="page-inner">
+    <!-- Admin Banner -->
+    <div class="admin-banner" style="background: linear-gradient(135deg, #4A90E2 0%, #357ABD 100%); color: white; padding: 30px; border-radius: 12px; margin-bottom: 25px; display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 20px;">
+      <div style="text-align: center;">
+        <div style="font-size: 28px; font-weight: 700;">47</div>
+        <div style="font-size: 13px; opacity: 0.9;">Total Laporan</div>
+      </div>
+      <div style="text-align: center; border-left: 1px solid rgba(255,255,255,0.3);">
+        <div style="font-size: 28px; font-weight: 700;">12</div>
+        <div style="font-size: 13px; opacity: 0.9;">Menunggu Verifikasi</div>
+      </div>
+      <div style="text-align: center; border-left: 1px solid rgba(255,255,255,0.3);">
+        <div style="font-size: 28px; font-weight: 700;">3</div>
+        <div style="font-size: 13px; opacity: 0.9;">Status Kritis</div>
+      </div>
+    </div>
+
+    <!-- Tabs Navigation -->
+    <div class="tabs-nav" style="display: flex; gap: 12px; border-bottom: 2px solid #E8EAF6; margin-bottom: 20px;">
+      <button class="tab-btn tab-active" style="padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: #4A90E2; border-bottom: 3px solid #4A90E2; border-bottom-offset: -2px; margin-bottom: -2px;" onclick="switchAdminTab('reports')">📋 Laporan</button>
+      <button class="tab-btn" style="padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: #999; margin-bottom: -2px;" onclick="switchAdminTab('schools')">🏫 Sekolah</button>
+      <button class="tab-btn" style="padding: 12px 20px; border: none; background: none; cursor: pointer; font-size: 14px; font-weight: 600; color: #999; margin-bottom: -2px;" onclick="switchAdminTab('alerts')">⚠️ Peringatan</button>
+    </div>
+
+    <!-- TAB 1: Reports -->
+    <div id="admin-reports" class="admin-tab-content" style="display: block;">
+      <div class="card">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #F5F7FA; border-bottom: 2px solid #E8EAF6;">
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">ID Laporan</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Sekolah</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Kategori</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Status</th>
+              <th style="padding: 12px; text-align: center; font-weight: 600; font-size: 13px; color: #666;">Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px; color: #FF6B6B; font-weight: 600;">RPT-2024-0892</td>
+              <td style="padding: 12px;">SDN 07 Manado</td>
+              <td style="padding: 12px;">Keterlambatan</td>
+              <td style="padding: 12px;"><span class="badge badge-resolved">✓ Selesai</span></td>
+              <td style="padding: 12px; text-align: center;"><button class="btn-action" style="padding: 6px 12px; font-size: 12px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer;">👁 Lihat</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px; color: #FFB800; font-weight: 600;">RPT-2024-0765</td>
+              <td style="padding: 12px;">SDN 12 Sorong</td>
+              <td style="padding: 12px;">Kualitas Menu</td>
+              <td style="padding: 12px;"><span class="badge badge-reviewed">Sedang Ditinjau</span></td>
+              <td style="padding: 12px; text-align: center;"><button class="btn-action" style="padding: 6px 12px; font-size: 12px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer;">✓ Verifikasi</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px; color: #4A90E2; font-weight: 600;">RPT-2024-0543</td>
+              <td style="padding: 12px;">SDN 05 Abepura</td>
+              <td style="padding: 12px;">Keterlambatan</td>
+              <td style="padding: 12px;"><span class="badge badge-submitted">Baru Dikirim</span></td>
+              <td style="padding: 12px; text-align: center;"><button class="btn-action" style="padding: 6px 12px; font-size: 12px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer;">✓ Verifikasi</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px; color: #FF6B6B; font-weight: 600;">RPT-2024-0501</td>
+              <td style="padding: 12px;">SDN 23 Jayapura</td>
+              <td style="padding: 12px;">Distributor Error</td>
+              <td style="padding: 12px;"><span class="badge badge-submitted">Baru Dikirim</span></td>
+              <td style="padding: 12px; text-align: center;"><button class="btn-action" style="padding: 6px 12px; font-size: 12px; background: #4A90E2; color: white; border: none; border-radius: 5px; cursor: pointer;">✓ Verifikasi</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 2: Schools -->
+    <div id="admin-schools" class="admin-tab-content" style="display: none;">
+      <div class="card">
+        <table style="width: 100%; border-collapse: collapse;">
+          <thead>
+            <tr style="background: #F5F7FA; border-bottom: 2px solid #E8EAF6;">
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Sekolah</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Provinsi</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Siswa</th>
+              <th style="padding: 12px; text-align: left; font-weight: 600; font-size: 13px; color: #666;">Status</th>
+              <th style="padding: 12px; text-align: center; font-weight: 600; font-size: 13px; color: #666;">Update</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px;">SDN 07 Manado</td>
+              <td style="padding: 12px;">Sulawesi Utara</td>
+              <td style="padding: 12px;">247</td>
+              <td style="padding: 12px;"><span style="background: #D4EDDA; color: #155724; padding: 4px 10px; border-radius: 4px; font-size: 12px;">Aktif</span></td>
+              <td style="padding: 12px; text-align: center;"><button style="background: none; border: none; color: #4A90E2; cursor: pointer; font-size: 18px;">✎</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px;">SDN 12 Sorong</td>
+              <td style="padding: 12px;">Papua Barat</td>
+              <td style="padding: 12px;">189</td>
+              <td style="padding: 12px;"><span style="background: #D4EDDA; color: #155724; padding: 4px 10px; border-radius: 4px; font-size: 12px;">Aktif</span></td>
+              <td style="padding: 12px; text-align: center;"><button style="background: none; border: none; color: #4A90E2; cursor: pointer; font-size: 18px;">✎</button></td>
+            </tr>
+            <tr style="border-bottom: 1px solid #E8EAF6;">
+              <td style="padding: 12px;">SDN 05 Abepura</td>
+              <td style="padding: 12px;">Papua</td>
+              <td style="padding: 12px;">156</td>
+              <td style="padding: 12px;"><span style="background: #FFF3CD; color: #856404; padding: 4px 10px; border-radius: 4px; font-size: 12px;">Terverifikasi</span></td>
+              <td style="padding: 12px; text-align: center;"><button style="background: none; border: none; color: #4A90E2; cursor: pointer; font-size: 18px;">✎</button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- TAB 3: Alerts -->
+    <div id="admin-alerts" class="admin-tab-content" style="display: none;">
+      <div style="display: flex; flex-direction: column; gap: 12px;">
+        <div class="card" style="display: flex; gap: 12px; align-items: start;">
+          <div style="width: 16px; height: 16px; background: #FF6B6B; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div style="font-weight: 600; color: #333;">KRITIS: Keterlambatan Ekstrem</div>
+            <div style="font-size: 13px; color: #666; margin: 4px 0;">SDN 12 Sorong - Belum menerima bantuan dalam 5 hari</div>
+            <div style="font-size: 12px; color: #999;">11 January 2024, 14:30</div>
+          </div>
+        </div>
+        
+        <div class="card" style="display: flex; gap: 12px; align-items: start;">
+          <div style="width: 16px; height: 16px; background: #FFB800; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div style="font-weight: 600; color: #333;">PERINGATAN: Menu Kualitas Rendah</div>
+            <div style="font-size: 13px; color: #666; margin: 4px 0;">3 laporan tentang menu kurang matang atau menu tertunda</div>
+            <div style="font-size: 12px; color: #999;">10 January 2024, 09:15</div>
+          </div>
+        </div>
+
+        <div class="card" style="display: flex; gap: 12px; align-items: start;">
+          <div style="width: 16px; height: 16px; background: #4A90E2; border-radius: 50%; margin-top: 4px; flex-shrink: 0;"></div>
+          <div style="flex: 1;">
+            <div style="font-weight: 600; color: #333;">INFO: Laporan Baru Masuk</div>
+            <div style="font-size: 13px; color: #666; margin: 4px 0;">12 laporan baru menunggu verifikasi admin</div>
+            <div style="font-size: 12px; color: #999;">09 January 2024, 16:45</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function switchAdminTab(tabName) {
+      // Hide all tabs
+      document.getElementById('admin-reports').style.display = 'none';
+      document.getElementById('admin-schools').style.display = 'none';
+      document.getElementById('admin-alerts').style.display = 'none';
+      
+      // Show selected tab
+      document.getElementById('admin-' + tabName).style.display = 'block';
+      
+      // Update tab buttons
+      const buttons = document.querySelectorAll('.tab-btn');
+      buttons.forEach(btn => {
+        btn.classList.remove('tab-active');
+        btn.style.color = '#999';
+        btn.style.borderBottom = 'none';
+      });
+      
+      // Highlight active button
+      event.target.classList.add('tab-active');
+      event.target.style.color = '#4A90E2';
+      event.target.style.borderBottom = '3px solid #4A90E2';
+    }
+  </script>

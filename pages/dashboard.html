@@ -1,0 +1,157 @@
+  <div class="dashboard-layout">
+    <div class="dash-header">
+      <div>
+        <div class="dash-title">📊 Dashboard Utama</div>
+        <div class="dash-sub">Monitoring distribusi program makan bergizi • <span style="color: var(--green-600); font-weight: 600;">🟢 Sistem Aktif</span> • Update 10:47 WIB</div>
+      </div>
+      <div style="display: flex; gap: 10px;">
+        <button class="btn-action btn-ghost" onclick="showPage('region')">🗺 Lihat Peta Wilayah</button>
+        <button class="btn-action btn-blue" onclick="showPage('feedback')">+ Kirim Laporan Baru</button>
+      </div>
+    </div>
+
+    <!-- KPI Cards -->
+    <div class="kpi-grid">
+      <div class="kpi-card kpi-blue" onclick="showPage('region')" style="cursor:pointer">
+        <div class="kpi-accent">🏫</div>
+        <div class="kpi-label">Total Penerima</div>
+        <div class="kpi-value">4,2 Jt</div>
+        <div class="kpi-change up">↑ 12% dari bulan lalu</div>
+      </div>
+      <div class="kpi-card kpi-green" onclick="showPage('tracker')" style="cursor:pointer">
+        <div class="kpi-accent">🍱</div>
+        <div class="kpi-label">Porsi Hari Ini</div>
+        <div class="kpi-value">3.847.290</div>
+        <div class="kpi-change up">↑ 91,5% dari target</div>
+      </div>
+      <div class="kpi-card kpi-orange">
+        <div class="kpi-accent">🗺</div>
+        <div class="kpi-label">Wilayah Aktif</div>
+        <div class="kpi-value">34</div>
+        <div class="kpi-change up">✓ Semua provinsi</div>
+      </div>
+      <div class="kpi-card kpi-red" onclick="showPage('tracking')" style="cursor:pointer">
+        <div class="kpi-accent">🔔</div>
+        <div class="kpi-label">Isu Terbuka</div>
+        <div class="kpi-value">47</div>
+        <div class="kpi-change alert">↑ 8 laporan baru hari ini</div>
+      </div>
+    </div>
+
+    <!-- Main dashboard grid -->
+    <div class="dash-grid">
+      <!-- Distribution Chart -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">Distribusi per Provinsi (Top 10)</span>
+          <button class="btn-action btn-ghost" style="font-size: 12px; padding: 5px 12px;" onclick="showPage('region')">Lihat Semua →</button>
+        </div>
+        <div class="card-body">
+          <div class="region-row" onclick="showPage('region')">
+            <div style="flex:1"><div class="region-name">DKI Jakarta</div><div class="region-sub">1.247 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-green" style="width: 96%"></div></div></div>
+            <div class="pct-label">96%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">Jawa Barat</div><div class="region-sub">2.891 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-green" style="width: 88%"></div></div></div>
+            <div class="pct-label">88%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">Jawa Tengah</div><div class="region-sub">3.102 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-green" style="width: 84%"></div></div></div>
+            <div class="pct-label">84%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">Jawa Timur</div><div class="region-sub">3.456 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-blue" style="width: 79%"></div></div></div>
+            <div class="pct-label">79%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">Sumatera Utara</div><div class="region-sub">1.834 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-blue" style="width: 72%"></div></div></div>
+            <div class="pct-label">72%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">Papua</div><div class="region-sub">487 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-orange" style="width: 41%"></div></div></div>
+            <div class="pct-label">41%</div>
+          </div>
+          <div class="region-row">
+            <div style="flex:1"><div class="region-name">NTT</div><div class="region-sub">612 sekolah</div></div>
+            <div class="progress-bar-wrap"><div class="progress-bar"><div class="progress-fill fill-red" style="width: 35%"></div></div></div>
+            <div class="pct-label">35%</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Alert Panel -->
+      <div class="card">
+        <div class="card-header">
+          <span class="card-title">⚡ Peringatan Aktif</span>
+          <div class="notif-dot">8</div>
+        </div>
+        <div class="card-body">
+          <div class="alert-item alert-critical" onclick="showPage('tracking')">
+            <div class="alert-dot dot-red"></div>
+            <div>
+              <div class="alert-text">Keterlambatan distribusi — NTT</div>
+              <div class="alert-time">47 sekolah belum menerima • 2j lalu</div>
+            </div>
+          </div>
+          <div class="alert-item alert-warning" onclick="showPage('tracking')">
+            <div class="alert-dot dot-orange"></div>
+            <div>
+              <div class="alert-text">Keluhan kualitas makanan — Papua</div>
+              <div class="alert-time">12 laporan masuk hari ini • 3j lalu</div>
+            </div>
+          </div>
+          <div class="alert-item alert-warning">
+            <div class="alert-dot dot-orange"></div>
+            <div>
+              <div class="alert-text">Stok bahan pokok menipis — Kaltim</div>
+              <div class="alert-time">Estimasi habis dalam 2 hari</div>
+            </div>
+          </div>
+          <div class="alert-item alert-info">
+            <div class="alert-dot dot-blue"></div>
+            <div>
+              <div class="alert-text">Verifikasi selesai — Jawa Barat</div>
+              <div class="alert-time">2.847 porsi dikonfirmasi • 1j lalu</div>
+            </div>
+          </div>
+        </div>
+        <div style="padding: 12px 20px; border-top: 1px solid var(--slate-100); text-align: center;">
+          <button class="btn-action btn-ghost" style="width: 100%; justify-content: center;" onclick="showPage('tracking')">Lihat Semua Laporan →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom row -->
+    <div class="dash-grid-3">
+      <!-- Weekly Chart -->
+      <div class="card" style="grid-column: span 2;">
+        <div class="card-header">
+          <span class="card-title">Tren Distribusi Minggu Ini</span>
+          <span style="font-size: 12px; color: var(--slate-400);">Porsi terkirim per hari</span>
+        </div>
+        <div class="chart-area" style="height: 180px; position: relative;">
+          <canvas id="weekChart"></canvas>
+        </div>
+      </div>
+
+      <!-- Quick Access -->
+      <div class="card">
+        <div class="card-header"><span class="card-title">Navigasi Cepat</span></div>
+        <div class="card-body">
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <button class="btn-action btn-ghost" style="width:100%; justify-content: flex-start; gap: 10px;" onclick="showPage('tracker')">🚚 Tracker Distribusi</button>
+            <button class="btn-action btn-ghost" style="width:100%; justify-content: flex-start; gap: 10px;" onclick="showPage('feed')">📋 Laporan Publik</button>
+            <button class="btn-action btn-ghost" style="width:100%; justify-content: flex-start; gap: 10px;" onclick="showPage('nutrition')">🥗 Insight Nutrisi</button>
+            <button class="btn-action btn-ghost" style="width:100%; justify-content: flex-start; gap: 10px;" onclick="showPage('feedback')">✍️ Kirim Laporan</button>
+            <button class="btn-action btn-ghost" style="width:100%; justify-content: flex-start; gap: 10px;" onclick="showPage('admin')">🔐 Panel Admin</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
