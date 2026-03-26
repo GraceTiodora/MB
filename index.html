@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MBGTrack — Sistem Pemantauan Program Makan Bergizi Gratis</title>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" />
+<link rel="stylesheet" href="css/styles.css">
+<!-- Leaflet JS Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+<!-- Chart.js Library -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.min.js"></script>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <a class="nav-brand" href="#" onclick="showPage('landing')">
+    <div class="logo-icon">M</div>
+    <div class="brand-text">
+      <span class="brand-main">MBGTrack</span>
+      <span class="brand-sub">Portal Data MBG Nasional</span>
+    </div>
+  </a>
+  <div class="nav-links" id="navbar-links">
+    <!-- Dynamic nav rendered by buildNavbar() -->
+  </div>
+  <div class="nav-right" id="navbar-right">
+    <!-- Auth buttons rendered by buildNavbar() -->
+    <button class="btn-role" onclick="showPage('login')" id="btn-login">Login</button>
+  </div>
+</nav>
+
+<!-- Pages Container - Content loaded dynamically -->
+<div id="pages-container"></div>
+
+<footer>
+  <div><strong>MGBTrack</strong> - Portal Data MBG Nasional</div>
+  <div class="footer-links">
+    <a href="#" onclick="showPage('landing')">Beranda</a>
+    <a href="#" onclick="showPage('dashboard')">Dashboard</a>
+    <a href="#" onclick="showPage('region')">Peta Wilayah</a>
+    <a href="#" onclick="showPage('feed')">Laporan Publik</a>
+    <a href="#" onclick="showPage('feedback')">Kirim Laporan</a>
+  </div>
+  <div class="footer-meta">Hak Cipta (c) 2026 MGBTrack • Kementerian Pendidikan &amp; Kebudayaan RI</div>
+</footer>
+
+<!-- All embedded JavaScript moved to modular files in /js/ -->
+<script src="data/regions.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/utils.js"></script>
+<script src="js/navigation.js"></script>
+<script src="js/forms.js"></script>
+<script src="js/maps.js"></script>
+<script src="js/charts.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
